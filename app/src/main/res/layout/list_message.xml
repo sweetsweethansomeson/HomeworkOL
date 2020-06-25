@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/message_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/black70"
+        android:textSize="15sp"
+        tools:text="学生 12345678" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/message_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_name"
+        android:layout_alignStart="@id/message_name"
+        android:maxLines="2"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black60"
+        android:textSize="12sp"
+        tools:text="申请加入课程\nXXX" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_detail"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_message_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            style="@style/RectButtonStyle"
+            android:textSize="13sp"
+            android:text="未读" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_message_delete"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/btn_message_read"
+            android:focusable="true"
+            android:layout_marginStart="35dp"
+            android:layout_toRightOf="@id/btn_message_read"
+            android:background="@color/lightRed"
+            android:text="删除"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

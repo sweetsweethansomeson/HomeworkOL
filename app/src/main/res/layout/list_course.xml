@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    tools:context=".view.JoinCourseInputView"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white">
+
+    <com.hjq.widget.view.ScaleImageView
+        android:id="@+id/iv_album_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        app:scaleRatio="0.95"
+        android:visibility="gone"
+        tools:src="@drawable/image_link" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/black70"
+        android:textSize="15sp"
+        tools:text="课程名称" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/course_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/course_name"
+        android:layout_alignStart="@id/course_name"
+        android:maxLines="2"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black60"
+        android:textSize="12sp"
+        tools:text="课程详情" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rb_album_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        style="@style/ButtonStyle"
+        android:textSize="13sp"
+        android:text="申请加入" />
+
+</RelativeLayout>
